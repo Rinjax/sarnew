@@ -4,7 +4,7 @@
 
         <!-- Modal content-->
         <div class="modal-content">
-            <form action="{!! route('updatemob.post') !!}" method="post">
+            <form action="#" method="post">
                 {!! csrf_field() !!}
 
                 <div class="modal-header">

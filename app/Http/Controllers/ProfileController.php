@@ -8,6 +8,7 @@ class ProfileController extends Controller
 {
     public function index()
     {
-        return view('pages.profile.layout');
+        $member = \Auth::user();
+        return view('pages.profile.layout')->with('member', $member);
     }
 }

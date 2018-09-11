@@ -1,12 +1,6 @@
-@extends('layoutOLD')
+@extends('layout')
 
-@section('title', 'My Profile')
 
-@section('headjs')
-    <!--script src='js/jquery.min.js'></script-->
-    <script src='js/moment.min.js'></script>
-    <script src='js/bootstrap-datetimepicker.min.js'></script>
-@endsection
 
 
 @section('content')
@@ -17,7 +11,7 @@
         
         <div class="row">
             <div class="col-md-12">
-                @include('partial.profile.details-tile')
+                @include('pages.profile.partial.details-tile')
             </div>
 
 
@@ -27,23 +21,7 @@
         </div>
 
 
-        <div class="row">
-            <div class="col-xs-12">
-                @include('partial.profile.cpd-tiles')
-            </div>
-        </div>
 
-
-
-        <div class="row">
-            <div class="col-md-6">
-                @include('partial.profile.stats-tile')
-            </div>
-
-            <div class="col-md-6">
-                @include('partial.profile.equipment-tile')
-            </div>
-        </div>
     </div>
 @endsection
 
@@ -63,9 +41,7 @@
         });
     </script>
 
-    {!! Charts::scripts() !!}
-    {!! $chart->script() !!}
-    {!! $chart2->script() !!}
+
 
 
 @endsection

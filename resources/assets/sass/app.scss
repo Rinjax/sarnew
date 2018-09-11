@@ -8,5 +8,8 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+//full calendar
+@import '../../../node_modules/fullcalendar/dist/fullcalendar.css';
+
 // App
 @import 'general';

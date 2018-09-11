@@ -23,6 +23,8 @@ class NavbarMenu
             $this->menu->addLink('Profile', 'profile');
 
             $this->menu->addLink('Dog', 'dog');
+            
+            $this->menu->addLink('Calendar', 'calendar');
 
             $view->with('MainMenu', $this->menu->render());
         }
