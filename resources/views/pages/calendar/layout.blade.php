@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div id="calendar"></div>
+    <div id="calendar" class=""></div>
 @endsection
 
 
@@ -11,7 +11,7 @@
 
     <script>
         $('#calendar').fullCalendar({
-            // put your options and callbacks here
+            defaultView: $(window).width() < 765 ? 'listWeek':'month'
         })
     </script>
 

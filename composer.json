@@ -7,12 +7,12 @@
 
     "repositories": [
         {
-            "type": "path",
-            "url": "c:/wamp64/www/Rinjax/menu"
+            "type": "vcs",
+            "url": "https://github.com/Rinjax/menu.git"
         },
         {
-            "type": "path",
-            "url": "c:/wamp64/www/Rinjax/google-api"
+            "type": "vcs",
+            "url": "https://github.com/Rinjax/google-api.git"
         }
 
     ],
