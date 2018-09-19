@@ -337,14 +337,17 @@ class DatabaseSeeder extends Seeder
 
         DB::table('calendar_types')->insert([
             [
-                'name' => 'Training',
-                'type_id' => 0,
+                'name' => ' Team Training',
+                'code' => '1a',
+                'route_name' => 'calfeed.training'
             ],[
                 'name' => 'Mock Assessments',
-                'type_id' => 1,
+                'code' => '2a',
+                'route_name' => 'calfeed.mock'
             ],[
                 'name' => 'Fund Raising',
-                'type_id' => 2,
+                'code' => '3a',
+                'route_name' => 'calfeed.fund'
             ]
         ]);
 

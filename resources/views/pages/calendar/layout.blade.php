@@ -11,7 +11,17 @@
 
     <script>
         $('#calendar').fullCalendar({
-            defaultView: $(window).width() < 765 ? 'listWeek':'month'
+            defaultView: $(window).width() < 765 ? 'listWeek':'month',
+            eventSources: [
+                {{-- @foreach($calTypes as $cal)
+                {
+                    url: '{!! route($cal->route_name) !!}',
+                    color: '{!! $cal->color !!}}',
+                    textColor: 'black'
+                },
+            @endforeach--}}
+            ]
+
         })
     </script>
 
