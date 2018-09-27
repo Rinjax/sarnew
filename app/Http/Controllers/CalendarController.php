@@ -14,4 +14,14 @@ class CalendarController extends Controller
         return view('pages.calendar.layout')->with('calTypes', $calTypes);
     }
 
+    public function viewEvent1a($id)
+    {
+        
+    }
+
+    public function viewEvent2a($id)
+    {
+        
+    }
+
 }

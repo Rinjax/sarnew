@@ -1,7 +1,7 @@
 <?php
 
-Route::get('/1a', 'CalendarFeedController@feed1a')->name('calfeed.1a');
+Route::get('/1a{start?}{end?}', 'CalendarFeedController@feed1a')->name('calfeed.training');
 
-Route::get('/2a', 'CalendarFeedController@feed2a')->name('calfeed.2a');
+Route::get('/2a{start?}{end?}', 'CalendarFeedController@feed2a')->name('calfeed.mock');
 
-Route::get('/3a', 'CalendarFeedController@feed3a')->name('calfeed.3a');
+Route::get('/3a{start?}{end?}', 'CalendarFeedController@feed3a')->name('calfeed.fund');

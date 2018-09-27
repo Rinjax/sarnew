@@ -339,15 +339,18 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => ' Team Training',
                 'code' => '1a',
-                'route_name' => 'calfeed.training'
+                'route_feed' => 'calfeed.training',
+                'route_drilldown' => 'calendar.viewevent.training'
             ],[
                 'name' => 'Mock Assessments',
                 'code' => '2a',
-                'route_name' => 'calfeed.mock'
+                'route_feed' => 'calfeed.mock',
+                'route_drilldown' => 'calendar.viewevent.mock'
             ],[
                 'name' => 'Fund Raising',
                 'code' => '3a',
-                'route_name' => 'calfeed.fund'
+                'route_feed' => 'calfeed.fund',
+                'route_drilldown' => 'calendar.viewevent.fund'
             ]
         ]);
 

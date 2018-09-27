@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Calendar;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -8,11 +8,13 @@ class Calendar extends Model
 {
     protected $table = 'calendar';
 
-    protected $hidden = ['attendance'];
-
     protected $guarded = ['id'];
 
-    
+
+    public function type()
+    {
+        return $this->hasOne('App\Models\Calendar\CalendarType', 'code', 'code');
+    }
     public function location()
     {
         return $this->hasOne('App\Models\TrainingLocation','id','location_id');

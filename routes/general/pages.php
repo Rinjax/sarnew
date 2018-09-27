@@ -6,4 +6,3 @@ Route::get('/profile', 'ProfileController@index')->name('profile');
 
 Route::get('/dog', 'DogController@index')->name('dog');
 
-Route::get('/calendar', 'CalendarController@index')->name('calendar');

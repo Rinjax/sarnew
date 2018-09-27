@@ -60,6 +60,11 @@ class RouteServiceProvider extends ServiceProvider
             ->prefix('pages')
             ->group(base_path('routes/general/pages.php'));
 
+        Route::middleware(['web', 'auth'])
+            ->namespace($this->namespace)
+            ->prefix('calendar')
+            ->group(base_path('routes/calendar/calendar.php'));
+
         Route::middleware(['web','auth'])
             ->namespace($this->namespace)
             ->prefix('calendar/feed/')

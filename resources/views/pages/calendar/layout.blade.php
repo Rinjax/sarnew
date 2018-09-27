@@ -13,14 +13,13 @@
         $('#calendar').fullCalendar({
             defaultView: $(window).width() < 765 ? 'listWeek':'month',
             eventSources: [
-                {{-- @foreach($calTypes as $cal)
+            @foreach($calTypes as $cal)
                 {
-                    url: '{!! route($cal->route_name) !!}',
-                    color: '{!! $cal->color !!}}',
-                    textColor: 'black'
+                    url: '{!! route($cal->route_feed) !!}',
                 },
-            @endforeach--}}
-            ]
+            @endforeach
+            ],
+            timeFormat: 'HH:mm'
 
         })
     </script>

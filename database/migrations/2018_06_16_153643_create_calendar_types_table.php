@@ -17,8 +17,9 @@ class CreateCalendarTypesTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('code');
-            $table->string('route_name')->nullable()->default(null);
-            $table->string('color')->nullable()->default(null);
+            $table->string('route_feed')->nullable()->default(null);
+            $table->string('route_viewevent')->nullable()->default(null);
+            $table->string('css_name')->nullable()->default(null);
             $table->timestamps();
 
         });
