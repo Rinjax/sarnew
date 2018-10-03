@@ -22,5 +22,5 @@ class CalendarFeedObject
     
     public $colorText;
     
-    public $cssClasses = [];
+    public $className = [];
 }

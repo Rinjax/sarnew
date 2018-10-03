@@ -15,7 +15,7 @@
             eventSources: [
             @foreach($calTypes as $cal)
                 {
-                    url: '{!! route($cal->route_feed) !!}',
+                    url: '{!! route($cal->route_feed) !!}'
                 },
             @endforeach
             ],

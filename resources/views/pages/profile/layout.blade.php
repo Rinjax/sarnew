@@ -1,24 +1,30 @@
-@extends('layout')
+@extends('layouts.layout')
 
 
 
 
 @section('content')
     <div class="main-area">
-        
-        @include('modal.updateMobile')
 
-        
-        <div class="row">
-            <div class="col-md-12">
-                @include('pages.profile.partial.details-tile')
-            </div>
-
-
-            <div class="col-md-6">
-
+        <div class="row mt-2">
+            <div class="col">
+                <h1 class="text-center">{!! $member->fullname() !!}</h1>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" src="{!! asset('img/profile/humans/default.jpg') !!}" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-title">John Doe</h4>
+                        <p class="card-text">Some example text.</p>
+                        <a href="#" class="btn btn-primary">See Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
 
 
@@ -30,18 +36,6 @@
 
 
 @section('scripts')
-    <script type="text/javascript">
-        $(function () {
-            $('#datetimepicker2').datetimepicker({
-                inline: true,
-                sideBySide: true,
-                stepping: 15,
-                format: ('YYYY-MM-DD HH:mm')
-            });
-        });
-    </script>
-
-
 
 
 @endsection

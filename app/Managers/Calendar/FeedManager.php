@@ -37,6 +37,12 @@ class FeedManager
             $calObj->end = $cal->end;
             $calObj->title = $cal->type->name;
             $calObj->url = route($cal->type->route_viewevent, ['id' => $cal->id]);
+            $calObj->className[] = 'cal-event';
+            $calObj->className[] = $cal->type->css_name;
+
+            foreach($cal->attendance as $member){
+                if($member->id == \Auth::id()) array_push($calObj->className, 'cal-event-attending');
+            }
 
             $array->add($calObj);
         }

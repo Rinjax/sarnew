@@ -1,5 +1,5 @@
 
-<div class="row mt-2">
+<div class="mt-2">
     <div class="card-deck">
         <div class="card text-center" style="background-color: #ffa10a;">
             <div class="card-body">
