@@ -34,3 +34,20 @@
   font-size: 1.1rem;
 }
 
+.card-attendance{
+  .card-body{
+    height: 20rem;
+    overflow-y : scroll;
+    .table{
+      display:block;
+      tbody{
+        tr{
+          td{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+

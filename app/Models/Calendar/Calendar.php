@@ -22,13 +22,13 @@ class Calendar extends Model
     
     public function attendance()
     {
-        return $this->belongsToMany('App\Models\Member','calendar_attendance')->orderBy('firstname');
+        return $this->belongsToMany('App\Models\Member\Member','calendar_attendance')->orderBy('firstname')->orderBy('surname');
     }
     
     
     public function isAttending($user_id)
     {
-        foreach ($this->belongsToMany('App\Models\Member','CalendarAttendance')->get() as $attendee){
+        foreach ($this->belongsToMany('App\Models\Member\Member','CalendarAttendance')->get() as $attendee){
             if($user_id === $attendee->id){
                 return true;
             }

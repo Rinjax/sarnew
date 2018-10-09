@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Dog;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -14,7 +14,7 @@ class Dog extends Model
     
     public function assessments(){
         //returns all assessments for a dog
-        return $this->hasMany('\App\Models\DogAssessments');
+        return $this->hasMany('\App\Models\Dogs\DogAssessments');
     }
     
 }

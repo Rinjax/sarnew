@@ -9,7 +9,7 @@
             <div class="card-footer">
                 <div style="font-size: 4rem;">
                     <span class="glyphicon glyphicon-user"></span>
-                    {{\App\Models\Member::where('active', 1)->count()}}
+                    {{\App\Models\Member\Member::where('active', 1)->count()}}
                 </div>
             </div>
         </div>
@@ -22,7 +22,7 @@
             <div class="card-footer">
                 <div style="font-size: 4rem;">
                     <span class="glyphicon glyphicon-user"></span>
-                    {{\App\Models\Member::where('status', 'Operational')->where('active',1)->count()}}
+                    {{\App\Models\Member\Member::where('status', 'Operational')->where('active',1)->count()}}
                 </div>
             </div>
         </div>
@@ -34,7 +34,7 @@
             <div class="card-footer">
                 <div style="font-size: 4rem;">
                     <span class="glyphicon glyphicon-user"></span>
-                    {{\App\Models\Member::where('active', 1)->whereIn('status', ['Training','Non Operational'])->count()}}
+                    {{\App\Models\Member\Member::where('active', 1)->whereIn('status', ['Training','Non Operational'])->count()}}
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@
             <div class="card-footer">
                 <div style="font-size: 4rem;">
                     <span class="fa fa-paw"></span>
-                    {{\App\Models\Dog::where('active', 1)->count()}}
+                    {{\App\Models\Dog\Dog::where('active', 1)->count()}}
                 </div>
             </div>
         </div>
@@ -58,7 +58,7 @@
             <div class="card-footer">
                 <div style="font-size: 4rem;">
                     <span class="fa fa-paw"></span>
-                    {{\App\Models\Dog::where('status', 'Operational')->where('active',1)->count()}}
+                    {{\App\Models\Dog\Dog::where('status', 'Operational')->where('active',1)->count()}}
                 </div>
             </div>
         </div>
@@ -70,7 +70,7 @@
             <div class="card-footer">
                 <div style="font-size: 4rem;">
                     <span class="fa fa-paw"></span>
-                    {{\App\Models\Dog::where('active', 1)->where('status', 'Training')->count()}}
+                    {{\App\Models\Dog\Dog::where('active', 1)->where('status', 'Training')->count()}}
                 </div>
             </div>
         </div>

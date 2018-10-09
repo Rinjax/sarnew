@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Dog;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -24,17 +24,17 @@ class DogAssessment extends Model
 
     public function getAssessor1 ()
     {
-        return $this->hasOne('App\Models\Member','id','assessor_1_id')->select(array('id','name'));
+        return $this->hasOne('App\Models\Member\Member','id','assessor_1_id')->select(array('id','name'));
     }
 
     public function getAssessor2 ()
     {
-        return $this->hasOne('App\Models\Member','id','assessor_2_id')->select(array('id','name'));
+        return $this->hasOne('App\Models\Member\Member','id','assessor_2_id')->select(array('id','name'));
     }
 
     public function getDog ()
     {
-        return $this->hasOne('App\Models\Dog','id','dog_id')->select(array('id','name'));
+        return $this->hasOne('App\Models\Dog\Dog','id','dog_id')->select(array('id','name'));
     }
 
     public function calendar()

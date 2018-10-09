@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Member;
-use App\Models\Dog;
+use App\Models\Member\member;
+use App\Models\Dog\Dog;
 
 class DashboardController extends Controller
 {

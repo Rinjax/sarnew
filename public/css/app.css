@@ -13401,3 +13401,49 @@ a.text-dark:focus {
   font-size: 1.1rem;
 }
 
+.card-attendance .card-body {
+  height: 20rem;
+  overflow-y: scroll;
+}
+
+.card-attendance .card-body .table {
+  display: block;
+}
+
+.card-attendance .card-body .table tbody tr td {
+  width: 100%;
+}
+
+.text-status-green {
+  background-color: green;
+  border-radius: 8px;
+  color: #fff;
+  padding: 2px 10px 2px 10px;
+}
+
+.text-status-red {
+  background-color: red;
+  border-radius: 8px;
+  color: #fff;
+  padding: 2px 10px 2px 10px;
+}
+
+.text-status-orange {
+  background-color: orange;
+  border-radius: 8px;
+  color: #fff;
+  padding: 2px 10px 2px 10px;
+}
+
+.text-status-purple {
+  background-color: darkslateblue;
+  border-radius: 8px;
+  color: #fff;
+  padding: 2px 10px 2px 10px;
+}
+
+.btn-attend {
+  height: 10rem;
+  width: 100%;
+}
+
