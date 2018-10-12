@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-xs-12">
+    <div class="col">
         <section class="alerts" style="margin-left: -1.5rem; margin-right: -1.5rem;">
             @if(session()->has('success'))
                 <div class="alert alert-success text-center" role="alert">

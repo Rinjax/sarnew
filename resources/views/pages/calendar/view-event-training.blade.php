@@ -6,7 +6,8 @@
         <div class="col">
             <div class="card">
                 <div class="">
-                    <div id="map" class="card-img-top" style="height: 25rem;" style="margin-right: -5rem; margin-left: -5rem;">
+                    <img class="card-img-top" src="{!! asset('img/page_asset/background.jpg') !!}" alt="logo" style="max-height: 15rem;">
+                    {{--<div id="map" class="card-img-top" style="height: 20rem; margin-right: -5rem; margin-left: -5rem;">--}}
                 </div>
                 <div class="card-body">
                     <div class="row">
@@ -27,20 +28,27 @@
                             <div class="card card-attendance">
                                 <div class="card-header">
                                     Attending: <strong>{!! count($cal->attendance) !!}</strong>
+                                    <span class="icon-user" style="font-size: 1.5rem"></span>
+                                    <span class="icon-stopwatch" style="font-size: 1.3rem"></span>
+
                                 </div>
                                 <div class="card-body">
-                                    <ul class="">
+                                    <table class="table">
                                         @foreach($cal->attendance as $member)
-                                            <li>
-                                                {!! $member->fullName() !!}
-                                            </li>
+                                            <tr>
+                                                <td>{!! $member->fullName() !!}</td>
+                                                <td><input id="start_{!! $member->id !!}" class="text-center form-control" type="text" placeholder="start"></td>
+                                                <td><input id="end_{!! $member->id !!}" class="text-center form-control" type="text" placeholder="finish"></td>
+                                            </tr>
                                         @endforeach
-                                    </ul>
+                                    </table>
 
                                 </div>
                             </div>
-                            <button class="btn btn-success btn-attend mt-4">Attend</button>
 
+                            @if(\Carbon\Carbon::parse($cal->start) >= \Carbon\Carbon::now())
+                                @include('pages.calendar.attend-form')
+                            @endif
 
                         </div>
                     </div>
@@ -53,7 +61,7 @@
 
 @section('scripts')
 
-            <script type="text/javascript">
+            {{--<script type="text/javascript">
                 function initMap(lat, long) {
 
                     console.log(typeof lat);
@@ -77,6 +85,6 @@
 
             <script async defer
                     src="https://maps.googleapis.com/maps/api/js?key={!! env('GOOGLE_MAP_APIKEY') !!}&callback=initMap">
-            </script>
+            </script>--}}
 
 @endsection

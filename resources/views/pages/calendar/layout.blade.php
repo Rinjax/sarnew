@@ -19,7 +19,7 @@
                 },
             @endforeach
             ],
-            timeFormat: 'HH:mm'
+            timeFormat: 'HH:mm',
 
         })
     </script>

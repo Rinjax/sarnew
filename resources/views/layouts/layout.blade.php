@@ -4,9 +4,10 @@
 
    @include('nav.main-nav')
 
-    @include('common.flashMessages')
 
     <div id="content" class="container space-2">
+        @include('common.flashMessages')
+
         @yield('content')
     </div>
 
