@@ -26,10 +26,16 @@
                         </div>
                         <div class="col-md mt-xs-5">
                             <div class="card card-attendance">
-                                <div class="card-header">
-                                    Attending: <strong>{!! count($cal->attendance) !!}</strong>
-                                    <span class="icon-user" style="font-size: 1.5rem"></span>
-                                    <span class="icon-stopwatch" style="font-size: 1.3rem"></span>
+                                <div class="card-header clearfix">
+                                    <div class="">
+                                        Attending: <strong>{!! count($cal->attendance) !!}</strong>
+
+                                    </div>
+                                    <div class="pull-right">
+                                        <span class="icon-user" style="font-size: 1.5rem"></span>
+                                        <span class="icon-stopwatch" style="font-size: 1.3rem"></span>
+                                    </div>
+
 
                                 </div>
                                 <div class="card-body">
